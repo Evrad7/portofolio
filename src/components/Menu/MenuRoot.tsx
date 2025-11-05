@@ -1,6 +1,6 @@
 "use client"
 
-import MenuContextProvider from '@/app/contexts/MenuContext'
+import MenuContextProvider from '@/contexts/MenuContext'
 import React, {FC } from 'react'
 
 

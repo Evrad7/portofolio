@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { isMobile as isMobileHelper } from '@/app/_utils/device';
+import { isMobile as isMobileHelper } from '@/_utils/device';
 import defaultTheme from "tailwindcss/defaultTheme"
 
 type BreakpointsType = {

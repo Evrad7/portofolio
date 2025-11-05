@@ -1,5 +1,5 @@
 "use client"
-import { MenuContext, MenuContextType } from "@/app/contexts/MenuContext"
+import { MenuContext, MenuContextType } from "@/contexts/MenuContext"
 import { useContext } from "react"
 
 const useMenu : () => MenuContextType = () => {

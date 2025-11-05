@@ -2,8 +2,9 @@ import React, { ReactNode } from 'react'
 import UpdateFollowerWrapper from '../UpdateFollowerWrapper'
 import useDevice from '@/hooks/useDevice'
 import PlayIconDesktop from '../PlayIcon/PlayIconDesktop'
+import { twMerge } from 'tailwind-merge'
 
-const UpdateFollowerWrapperWatchIntro = ({children}: {children: ReactNode}) => {
+const UpdateFollowerWrapperWatchIntro = ({children, ...props}: {children: ReactNode, className: string}) => {
   const {isDesktop} = useDevice()
     const onStartVideo = () =>{
         alert("starting intro .......")
@@ -19,7 +20,8 @@ const UpdateFollowerWrapperWatchIntro = ({children}: {children: ReactNode}) => {
         // zIndex: 99,
         followSpeed: .5,
         backgroundElement: <PlayIconDesktop /> }}
-    >
+        {...props}
+            >
         {children}
     </UpdateFollowerWrapper>
   )

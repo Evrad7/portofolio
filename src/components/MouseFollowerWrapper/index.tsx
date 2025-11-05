@@ -1,6 +1,5 @@
 "use client"
 
-import { isMobile } from "@/app/_utils/device"
 import useDevice from "@/hooks/useDevice"
 import { Fragment, useEffect, useRef } from "react"
 import { MouseFollower, useControlOptions } from "react-mouse-follower"
@@ -29,7 +28,7 @@ const MouseFollowerWrapper = ({children}: {children: React.ReactNode}) => {
    if (isDesktop){
       return (
          <Fragment>
-            <MouseFollower  />
+            {/* <MouseFollower  /> */}
                <div ref = {refOverlay} className="h-dvh w-full fixed top-0 left-0 z-50"></div>
              {children}
          </Fragment> 

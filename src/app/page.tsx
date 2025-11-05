@@ -1,7 +1,10 @@
 
 import Menu from "@/components/Menu";
 import MouseFollowerWrapper from "@/components/MouseFollowerWrapper";
+import Certificates from "@/sections/Certificates";
 import Hero from "@/sections/Hero"
+import Projects from "@/sections/Projects";
+import Skills from "@/sections/Skills";
 
 export default function Home() {
   return (
@@ -15,8 +18,9 @@ export default function Home() {
           <Hero/>
         </header>
         <main>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quaerat ea sunt voluptatem ipsa debitis veritatis vel adipisci omnis amet magni voluptatum, quis consequuntur velit est perspiciatis expedita pariatur repudiandae!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eveniet explicabo minus alias accusamus dignissimos exercitationem eius odio, magnam quam voluptatum aut veniam ea, quasi illo delectus quae, similique sunt!
+          <Projects/>
+          <Certificates/> 
+          <Skills/>
         </main>
         <footer>
 
