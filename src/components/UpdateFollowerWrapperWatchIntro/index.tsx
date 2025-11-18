@@ -4,7 +4,7 @@ import useDevice from '@/hooks/useDevice'
 import PlayIconDesktop from '../PlayIcon/PlayIconDesktop'
 import { twMerge } from 'tailwind-merge'
 
-const UpdateFollowerWrapperWatchIntro = ({children, ...props}: {children: ReactNode, className: string}) => {
+const UpdateFollowerWrapperWatchIntro = ({children, ...props}: {children: ReactNode, className?: string}) => {
   const {isDesktop} = useDevice()
     const onStartVideo = () =>{
         alert("starting intro .......")

@@ -10,7 +10,8 @@ import menuItems from './menuItems'
 
 
 
-const MenuContentHero = () => {
+const MenuContentMain = () => {
+    // Menu content for hero section and for mobile, main menu
  const {menuOpen} = useMenu()
  const {breakpoints} = useDevice()
 
@@ -19,28 +20,27 @@ const MenuContentHero = () => {
   const animationDelayOnClose = menuItems.reduce((previous, _, index) => previous + (index+1)*speedFactor, 0) - .5
 
   return (
-    <UpdateFollowerWrapperWatchIntro className='h-full bg-red-500'>
+    <UpdateFollowerWrapperWatchIntro>
         <motion.div
             animate = {{ 
                 display: menuOpen || breakpoints.xl ? "block": "none"
                 }}
             transition={{ease: "easeOut", delay: menuOpen || breakpoints.xl? animationDelayOnOpen: animationDelayOnClose }}
             data-state={menuOpen ? 'open' : 'closed'}
-            className='pt-18 xl:pt-0 h-full max-xl:bg-[url(/background-menu-mobile.png)] bg-center bg-cover xl:bg-transparent'>
+            className='fixed xl:absolute top-0 right-0 z-30  xl:right-25 w-full h-full xl:w-auto'>
             <motion.div 
                 initial = {{opacity: 0}}
                 animate = {{opacity: menuOpen || breakpoints.xl ? 1: 0 }}
                 transition={{ duration: .3, ease: "easeOut", delay: menuOpen || breakpoints.xl ? animationDelayOnOpen: animationDelayOnClose}}
-                className='' >
-
-                <div className={`'xl:pt-0 flex  flex-col sm:justify-center items-center h-full w-full`}>
-                    <UpdateFollowerWrapper mouseOptions={{visible: false}} >
+                className='pt-18 xl:pt-0 size-full max-xl:bg-[url(/background-menu-mobile.png)] bg-center bg-cover xl:bg-transparent' >
+                    <UpdateFollowerWrapper mouseOptions={{visible: false}} className='xl:pt-0 flex  flex-col sm:justify-center items-center size-full'>
                         <ul  className='flex flex-col gap-y-4 [@media(min-height:640px)]:xl:gap-y-7 w-full max-w-lg xl:max-w-sm px-4'>
                             {menuItems.map( (item, index) => 
                             <motion.li  
                                 key = {item.href}
                                 initial ={{y: "3rem",opacity: 0}}
-                                animate ={{y: breakpoints.xl ? 0: (menuOpen ? 0: "3rem"), opacity:breakpoints.xl ? 1: (menuOpen ? 1: 0)}}
+                                animate ={{y: breakpoints.xl ? 0: (menuOpen ? 0: "3rem"),opacity:breakpoints.xl ? 1: (menuOpen ? 1: 0)
+                                }}
                                 transition={{duration: .3, ease: "easeOut", delay: menuOpen || breakpoints ? (index+1)*speedFactor : (menuItems.length - index)*speedFactor}}
                                 >
                                 <MenuItem data={item}/>
@@ -48,10 +48,8 @@ const MenuContentHero = () => {
                             )}
                         </ul>
                     </UpdateFollowerWrapper>
-               
-                </div>
         
-        </motion.div>
+            </motion.div>
         </motion.div>
     </UpdateFollowerWrapperWatchIntro>
    
@@ -60,4 +58,4 @@ const MenuContentHero = () => {
   )
 }
 
-export default MenuContentHero
+export default MenuContentMain

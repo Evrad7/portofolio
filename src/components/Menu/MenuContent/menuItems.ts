@@ -10,23 +10,24 @@ type MenuItemsType = Array<MenuItemType>
 
  const menuItems : MenuItemsType= [
     {
-        href: "skills",
-        title: "Competences",
-        subItems: [
-            "développement frontent et backend", 
-            "orchestration et data",
-            "technologies cloud"
-        ]
-    },
-     {
         href: "projects",
-        title: "Quelques projets personnels",
+        title: "Projets ",
         subItems: [
             "Présentation d'activité d'entreprise", 
             "Vente en ligne",
             "Réseau social, etc."
         ]
     },
+    {
+        href: "skills",
+        title: "Compétences",
+        subItems: [
+            "développement frontent et backend", 
+            "orchestration et data",
+            "technologies cloud"
+        ]
+    },
+
      {  
         href: "certificate",
         title: "Certifications",
@@ -47,7 +48,7 @@ type MenuItemsType = Array<MenuItemType>
     // },
      {
         href: "experience-and-education",
-        title: "Expérences professionnelle et formations",
+        title: "Expérences & formations",
         subItems: [
             "Expériences en extreprise", 
             "Niveau d'étude"
@@ -55,7 +56,7 @@ type MenuItemsType = Array<MenuItemType>
     },
      {
         href: "contact",
-        title: "Entrons en contact",
+        title: "Contact",
         subItems: [
             "Formulaire de contact",
             "LinkedIn, Email, Tel, Github"

@@ -1,7 +1,10 @@
 
 import Menu from "@/components/Menu";
 import MouseFollowerWrapper from "@/components/MouseFollowerWrapper";
+import UpdateFollowerWrapper from "@/components/UpdateFollowerWrapper";
 import Certificates from "@/sections/Certificates";
+import Contacts from "@/sections/Contacts";
+import ExperiencesAndFormations from "@/sections/ExperiencesAndFormations";
 import Hero from "@/sections/Hero"
 import Projects from "@/sections/Projects";
 import Skills from "@/sections/Skills";
@@ -18,16 +21,24 @@ export default function Home() {
           <Hero/>
         </header>
         <main>
-          <Projects/>
-          <Certificates/> 
-          <Skills/>
+          <UpdateFollowerWrapper mouseOptions={{backgroundColor: "black",  backgroundElement: null, scale:2, followSpeed: .3}}>
+             <Projects/>
+            <Certificates/> 
+
+            {/* <div className=" relative  before:absolute before:inset-0  before:opacity-15 md:before:opacity-25 before:bg-[url(/big-shadow.png)] before:bg-size-[500%_100%] before:bg-[0%_20%] before:bg-no-repeat"> */}
+            <Skills/>
+            {/* </div> */}
+         
+            <ExperiencesAndFormations/>
+            <Contacts/>
+          </UpdateFollowerWrapper>
+
+         
+
         </main>
         <footer>
 
         </footer>
-        <h1>Home</h1>
-        <div className="size-[200px] bg-stone-500"></div>
-        <div className="size-64 bg-amber-600"></div>
 
       
       </MouseFollowerWrapper>

@@ -25,16 +25,17 @@ const MenuToggle: FC<React.HTMLAttributes<HTMLElement>> = ({className, ...props}
             aria-controls="menu"
             aria-haspopup="menu"
             aria-label={menuOpen ? 'close menu' : 'open menu'}
-            className={twMerge(className, "rounded-full bg-white flex xl:hidden justify-center items-center z-50 fixed top-5 right-5")}
+            className={twMerge(className, "rounded-full bg-white flex xl:hidden justify-center items-center z-50 fixed top-3 right-3 sm:top-5 sm:right-5")}
             {...props}
         >
-            <UpdateFollowerWrapper className='p-1 sm:p-2 cursor-pointer' mouseOptions={{
+            <UpdateFollowerWrapper className='sm:p-2 cursor-pointer' mouseOptions={{
                 scale: 5,
                 mixBlendMode: "difference",
                 backgroundColor: "white",
                 customPosition: ref
             }}>
                 <svg
+                    className='max-sm:scale-75'
                     xmlns="http://www.w3.org/2000/svg"
                     width="35"
                     height="35"

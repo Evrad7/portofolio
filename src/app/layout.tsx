@@ -101,7 +101,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${avenirLtdPro.variable} ${saira.variable} ${tenor.variable} font-sans  antialiased`}
+        className={`${avenirLtdPro.variable} ${saira.variable} ${tenor.variable} font-sans  antialiased bg-white`}
       >
         {children}
         

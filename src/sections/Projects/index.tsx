@@ -53,8 +53,8 @@ const Projects = () => {
   }, [close, open])
 
   return (
-    <section  className='py-5 sm:py-7 lg:py-10 relative before:hidden  before:absolute before:inset-0  before:opacity-15 md:before:opacity-25 before:bg-[url(/big-shadow.png)] before:bg-size-[500%_100%] before:bg-[0%_20%] before:bg-no-repeat'>
-      <Title text='Quelques projets' className='sm:pl-4 mb-4 sm:mb-7 2xl:mb-22 ' />
+    <section  className='py-5  sm:pt-7 lg:pt-10  sm:pb-7 lg:pb-20 xl:pb-30  relative before:hidden  before:absolute before:inset-0  before:opacity-15 md:before:opacity-25 before:bg-[url(/big-shadow.png)] before:bg-size-[500%_100%] before:bg-[0%_20%] before:bg-no-repeat'>
+      <Title text='Quelques projets' className='mb-4 sm:mb-7 2xl:mb-22 ' />
       <div>
         {projects.map((item, index) => (
           <div key = {index}>
