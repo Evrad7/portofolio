@@ -1,12 +1,11 @@
 "use client"
 
-import { useInView } from "motion/react";
 import { createContext, useState } from "react";
 
 export type MenuContextType = {
     menuOpen: boolean,
     setMenuOpen: (menuOpen: boolean) => void,
-    isInHeroSection: boolean
+    isInHeroSection: boolean,
 }
 
 const  MenuContext = createContext<MenuContextType | undefined>(undefined)

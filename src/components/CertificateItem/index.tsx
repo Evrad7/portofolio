@@ -1,6 +1,7 @@
 import { CertificateType } from '@/data/certificates'
 import Image from 'next/image'
 import React from 'react'
+import UpdateFollowerWrapper from '../UpdateFollowerWrapper'
 
 const CertificateItem = ({data}: {data: CertificateType}) => {
   return (
@@ -22,9 +23,12 @@ const CertificateItem = ({data}: {data: CertificateType}) => {
                 ))}
             </ul>
         </div>
-        <div className='absolute bottom-2 lg:bottom-4 left-4 text-sm md:text-md italic underline'>
-            <a href={data.link} target='_blank'>Voir le certificat</a>
-        </div>
+        <UpdateFollowerWrapper  mouseOptions={{visible:false}}>
+            <div className='absolute bottom-2 lg:bottom-4 left-4 text-sm md:text-md italic underline '>
+                <a href={data.link} target='_blank'>Voir le certificat</a>
+            </div>
+        </UpdateFollowerWrapper>
+   
     </div>
   )
 }

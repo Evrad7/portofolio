@@ -8,7 +8,7 @@ const Formations = ({className}: {className?: string}) => {
         <tbody>
           {formations.map((item, index) => (
             <tr className='border-[0.5px] border-stone-300 text-xs sm:text-base' key = {index}>
-              <td className='py-5 sm:py-9 px-1 sm:px-5 flex gap-x-2 lg:font-medium'>
+              <td className='py-5 sm:py-9 px-5 sm:px-5 flex gap-x-2 lg:font-medium'>
                 <span className='font-mono text-gold font-bold'>0{index+1}</span>
                 <span>{item.degree}</span>
                </td>

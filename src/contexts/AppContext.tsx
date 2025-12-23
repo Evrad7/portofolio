@@ -2,23 +2,20 @@
 
 "use client"
 
-import React, { createContext, useEffect, useRef } from "react";
+import React, { createContext,  useState } from "react";
 import { MouseFollower } from "react-mouse-follower";
 
 export type AppContextType = {
-  mouseFollowerRef: React.RefObject<HTMLElement | null>;
+  activeSection: string | null;
+  setActiveSection: (activeSection: string | null) => void
 };
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const AppContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const mouseFollowerRef = useRef<HTMLElement>(null);
-
-    useEffect(() =>{
-        mouseFollowerRef.current = document.getElementById("mouse-follower")
-    },  [])
+  const [activeSection, setActiveSection] = useState<string | null>(null)
   return (
-    <AppContext.Provider value={{mouseFollowerRef}}>
+    <AppContext.Provider value={{activeSection, setActiveSection}}>
         <MouseFollower />
       {children}
     </AppContext.Provider>

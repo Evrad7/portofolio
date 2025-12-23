@@ -1,11 +1,12 @@
 "use client"
 
+import AppContextProvider from "@/contexts/AppContext"
 import useDevice from "@/hooks/useDevice"
 import { Fragment, useEffect, useRef } from "react"
 import { MouseFollower, useControlOptions } from "react-mouse-follower"
 
 
-const MouseFollowerWrapper = ({children}: {children: React.ReactNode}) => {
+const AppWrapper = ({children}: {children: React.ReactNode}) => {
    const {isDesktop} = useDevice()
    
    const refOverlay = useRef<HTMLDivElement>(null)
@@ -27,16 +28,16 @@ const MouseFollowerWrapper = ({children}: {children: React.ReactNode}) => {
 
    if (isDesktop){
       return (
-         <Fragment>
+         <AppContextProvider>
             <MouseFollower  />
                <div ref = {refOverlay} className="h-dvh w-full fixed top-0 left-0 z-50"></div>
              {children}
-         </Fragment> 
+         </AppContextProvider> 
       )
    }
-   return children
+   return <AppContextProvider>{children}</AppContextProvider>
 
 
 }
 
-export default MouseFollowerWrapper
+export default AppWrapper

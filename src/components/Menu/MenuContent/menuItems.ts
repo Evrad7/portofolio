@@ -18,6 +18,15 @@ type MenuItemsType = Array<MenuItemType>
             "Réseau social, etc."
         ]
     },
+    {  
+        href: "certificates",
+        title: "Certifications",
+        subItems: [
+            "Certifications Cloud", 
+            "Certifications Docker",
+            "Certifications développement"
+        ]
+    },
     {
         href: "skills",
         title: "Compétences",
@@ -28,15 +37,6 @@ type MenuItemsType = Array<MenuItemType>
         ]
     },
 
-     {  
-        href: "certificate",
-        title: "Certifications",
-        subItems: [
-            "Certifications Cloud", 
-            "Certifications Docker",
-            "Certifications développement"
-        ]
-    },
     //  {
     //     href: "reference",
     //     title: "Quelques références",

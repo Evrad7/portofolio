@@ -10,15 +10,7 @@ export type SkillType = {
 };
 
 const skills: Array<SkillType> = [
-  {
-    title: "Développement Frontend",
-    description:
-      "Je conçois et développe des interfaces modernes et ergonomiques pour une expérience fluide et agréable.",
-    subSkills: {
-      title: "Technologies maîtrisées",
-      items: ["JavaScript / TypeScript", "React.js / Angular", "Jest / Vitest"]
-    }
-  },
+
   {
     title: "Développement Backend",
     description:
@@ -32,6 +24,16 @@ const skills: Array<SkillType> = [
       ]
     }
   },
+  {
+    title: "Développement Frontend",
+    description:
+      "Je conçois et développe des interfaces modernes et ergonomiques pour une expérience fluide et agréable.",
+    subSkills: {
+      title: "Technologies maîtrisées",
+      items: ["JavaScript / TypeScript", "React.js / Angular", "Jest / Vitest"]
+    }
+  },
+
   {
     title: "Conteneurisation et Orchestration",
     description:
@@ -53,7 +55,6 @@ const skills: Array<SkillType> = [
       items: [
         "AWS / Amazon Web Services",
         "GCP / Google Cloud Platform",
-        "Azure"
       ]
     }
   },

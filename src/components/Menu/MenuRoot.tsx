@@ -2,16 +2,12 @@
 
 import MenuContextProvider from '@/contexts/MenuContext'
 import { useInView } from 'motion/react'
-import React, {FC, useEffect, useRef } from 'react'
+import React, {FC, useRef } from 'react'
 
 
 const MenuRoot: FC<React.HTMLAttributes<HTMLElement>> = ({ children, ...props }) => {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, {margin: "100% 0px 0px 0px", initial: true})
-
-  useEffect(() => {
-    console.log("Element is in view: ", isInView)
-  }, [isInView])
 
   return (
     <MenuContextProvider isInHeroSection = {isInView}>

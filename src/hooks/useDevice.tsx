@@ -5,7 +5,7 @@ import defaultTheme from "tailwindcss/defaultTheme"
 type BreakpointsType = {
     // sm: boolean,
     // md: boolean,
-    // lg: boolean,
+    // lg?: boolean,
     xl?: boolean,
     // '2xl': boolean,
 }
@@ -32,6 +32,7 @@ const useDevice : () => UseDeviceType = () => {
         const isMobile = isMobileHelper()
         const {width, height} = getWindowDimensions()
         const xl = window.matchMedia(`(min-width: ${defaultTheme.screens.xl})`).matches
+
       setSettings({width, height, isMobile, isDesktop: !isMobile, breakpoints: {xl}});
     }
     handleResize()
