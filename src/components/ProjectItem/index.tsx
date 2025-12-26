@@ -58,7 +58,7 @@ const ProjectItem = (
     <motion.div ref = {ref} 
      
       className='scroll-mt-15 sm:scroll-mt-19 xl:scroll-mt-25 relative '>
-      <UpdateFollowerWrapper mouseOptions={{visible: false ,text: `Ouvrir le projet `, radius: 30, textFontFamily: "var(--font-tenor)", textFontSize: ".6rem", }}>
+      <UpdateFollowerWrapper mouseOptions={{visible: false}}>
         <div
           className='h-[4.5rem] xl:h-[7rem] 2xl:h-[9rem] border-t max-sm:border-stone-500 p-2 flex items-center lg:mb-2 xl:mb-0 cursor-pointer [--distance-top:-.15rem] sm:[--distance-top:-.5rem]' onClick={handleToggleStateProject}>
           <motion.div
