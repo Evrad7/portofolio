@@ -4,6 +4,7 @@ import { twMerge } from 'tailwind-merge'
 import UpdateFollowerWrapper from '../UpdateFollowerWrapper'
 import useMenu from '@/hooks/useMenu.hook'
 import {motion} from "motion/react"
+import Image from 'next/image'
 
 const MenuBrand : FC<React.HTMLAttributes<HTMLElement>> = ({className}) => {
   const {isInHeroSection} = useMenu()

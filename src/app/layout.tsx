@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local"
 import {Saira, Tenor_Sans} from "next/font/google"
 import "./globals.css";
-import GoogleAnalytics from "./GoogleAnalytics";
 import AppGate from "@/components/AppGate";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 
 export const tenor = Tenor_Sans({
@@ -94,6 +94,7 @@ const avenirLtdPro = localFont({
 export const metadata: Metadata = {
   title: "Evrad7",
   description: "Portofolio d'un développeur full stack",
+  
 };
 
 export default function RootLayout({
@@ -108,7 +109,7 @@ export default function RootLayout({
       >
         <AppGate>{children}</AppGate>
       </body>
-      <GoogleAnalytics/>
+      <GoogleAnalytics gaId = {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS!}/>
     </html>
   );
 }
