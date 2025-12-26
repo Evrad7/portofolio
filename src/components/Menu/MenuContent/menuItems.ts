@@ -31,7 +31,8 @@ type MenuItemsType = Array<MenuItemType>
         href: "skills",
         title: "Compétences",
         subItems: [
-            "développement frontent et backend", 
+            "développement backend",
+            "développement frontent ", 
             "orchestration et data",
             "technologies cloud"
         ]

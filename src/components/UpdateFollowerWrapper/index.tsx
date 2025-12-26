@@ -1,10 +1,9 @@
 "use client"
 
 import useDevice from '@/hooks/useDevice';
-import { CSSProperties, ReactNode, useRef } from 'react'
+import { CSSProperties, ReactNode } from 'react'
 import { UpdateFollower } from 'react-mouse-follower'
 import { MouseSettings } from 'react-mouse-follower/dist/types';
-import { twMerge } from 'tailwind-merge';
 
 const UpdateFollowerWrapper = ({children, mouseOptions, ...props}:
       {mouseOptions?: MouseSettings;
@@ -18,11 +17,9 @@ const UpdateFollowerWrapper = ({children, mouseOptions, ...props}:
   const {isMobile} = useDevice()
   const mouseFollowerIsActive: boolean = !isMobile
   const ChildrenNode = typeof children === "function" ? children(mouseFollowerIsActive) : children
-
-    
   if (mouseFollowerIsActive){
     return (
-        <UpdateFollower mouseOptions={mouseOptions} {...props}>
+        <UpdateFollower mouseOptions={{visible: true, ...mouseOptions}} {...props}>
           {ChildrenNode}
         </UpdateFollower>
     )

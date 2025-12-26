@@ -1,9 +1,16 @@
 import Tilt from "react-parallax-tilt"
 import { MenuItemType } from "./menuItems"
+import useMenu from "@/hooks/useMenu.hook"
 
 const MenuItem = ({data}:{data:MenuItemType}) =>{
+
+    const {setMenuOpen} = useMenu()
+    const onClickLinkHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
+        event.stopPropagation()
+        setMenuOpen(false)
+    }
     return (
-            <a href={`#${data.href}`} className="w-full">
+            <a href={`#${data.href}`} className="w-full" onClick={onClickLinkHandler}>
             <Tilt tiltReverse glareEnable glareReverse>
                 <div 
                     className='relative bg-white flex items-center [@media(min-height:640px)]:block pl-2 pr-2 sm:pr-34 pt-2 pb-2 [@media(min-height:640px)]:pb-3  min-h-14   [@media(min-height:640px)]:min-h-27 w-full overflow-hidden

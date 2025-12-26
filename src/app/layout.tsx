@@ -1,14 +1,17 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local"
 import {Saira, Tenor_Sans} from "next/font/google"
 import "./globals.css";
+import GoogleAnalytics from "./GoogleAnalytics";
+import AppGate from "@/components/AppGate";
 
 
 export const tenor = Tenor_Sans({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-tenor",
+  variable: "--font-tenor-sans",
 })
 
 export const saira = Saira({
@@ -103,9 +106,9 @@ export default function RootLayout({
       <body
         className={`${avenirLtdPro.variable} ${saira.variable} ${tenor.variable} font-sans  antialiased bg-white`}
       >
-        {children}
-        
+        <AppGate>{children}</AppGate>
       </body>
+      <GoogleAnalytics/>
     </html>
   );
 }

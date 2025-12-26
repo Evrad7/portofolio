@@ -10,7 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-avenir-sans) sans-serif;
   --font-mono: var(--font-saira-mono);
-  --font-tenor: var(--font-tenor) sans-serif;
+  --font-tenor: var(--font-tenor-sans) sans-serif;
   --color-gold: #b2922a;
   --color-gray: #e9e9e9;
 

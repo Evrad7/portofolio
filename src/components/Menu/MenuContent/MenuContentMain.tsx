@@ -5,7 +5,6 @@ import MenuItem from './MenuItem'
 import {motion} from "motion/react"
 import useDevice from '@/hooks/useDevice'
 import UpdateFollowerWrapper from '@/components/UpdateFollowerWrapper'
-import UpdateFollowerWrapperWatchIntro from '@/components/UpdateFollowerWrapperWatchIntro'
 import menuItems from './menuItems'
 
 
@@ -20,7 +19,6 @@ const MenuContentMain = () => {
   const animationDelayOnClose = menuItems.reduce((previous, _, index) => previous + (index+1)*speedFactor, 0) - .5
 
   return (
-    <UpdateFollowerWrapperWatchIntro>
         <motion.div
             animate = {{ 
                 display: menuOpen || breakpoints.xl ? "block": "none"
@@ -51,7 +49,6 @@ const MenuContentMain = () => {
         
             </motion.div>
         </motion.div>
-    </UpdateFollowerWrapperWatchIntro>
    
   
     

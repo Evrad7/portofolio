@@ -2,9 +2,9 @@
 
 import useMenu from '@/hooks/useMenu.hook'
 import React, { FC, useRef } from 'react'
-import { UpdateFollower } from 'react-mouse-follower'
 import { twMerge } from 'tailwind-merge'
 import UpdateFollowerWrapper from '../UpdateFollowerWrapper'
+import {motion} from "motion/react"
 
 
 const MenuToggle: FC<React.HTMLAttributes<HTMLElement>> = ({className, ...props}) => {
@@ -15,6 +15,7 @@ const MenuToggle: FC<React.HTMLAttributes<HTMLElement>> = ({className, ...props}
     const toggleMenu = () =>{
         setMenuOpen(!menuOpen)
     }
+ 
   return (
    
         <button
@@ -35,15 +36,23 @@ const MenuToggle: FC<React.HTMLAttributes<HTMLElement>> = ({className, ...props}
                 customPosition: ref
             }}>
                 <svg
-                    className='max-sm:scale-75'
+                    className='max-sm:scale-75 relative'
                     xmlns="http://www.w3.org/2000/svg"
                     width="35"
                     height="35"
                     viewBox="0 0 35 35"
                     fill="none"
                 >
-                    <rect x="5.5" y="11" width="24" height="2" fill="black" />
-                    <rect x="5.5" y="21" width="24" height="2" fill="black" />
+                    
+                    <motion.rect
+                         animate = {{originX: 0.5, originY:0.5, y:menuOpen?5:0, rotate:menuOpen?45:0, scaleY:menuOpen?1.15:1}}
+                         transition={{ease:"easeInOut", duration:.4}}
+                         x="5.5" y="11" width="24" height="2" fill="var(--color-slate-700)" />
+                    <motion.rect 
+                        animate = {{ originX: 0.5, originY:0.5, y:menuOpen?-5:0, rotate:menuOpen?-45:0, scaleY:menuOpen?1.15:1}}
+                        transition={{ease:"easeInOut", duration:.4}}
+                        x="5.5" y="21" width="24" height="2" fill="var(--color-slate-700)" />
+                    
                 </svg>
              </UpdateFollowerWrapper>
             </button>

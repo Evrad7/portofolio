@@ -1,6 +1,6 @@
 "use client"
 
-import { Fragment, useEffect, useRef } from "react"
+import { Fragment} from "react"
 import useDevice from "@/hooks/useDevice"
 import useMenu from "@/hooks/useMenu.hook"
 import MenuContentMain from "./MenuContentMain"
@@ -16,7 +16,6 @@ const MenuContent = () => {
         <Fragment>
             {(isInHeroSection || !breakpoints.xl) && <MenuContentMain/>}
             {!isInHeroSection && <MenuContentScrolled/>}
-             
         </Fragment>
 
     )

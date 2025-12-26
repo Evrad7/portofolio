@@ -11,7 +11,7 @@ const MenuRoot: FC<React.HTMLAttributes<HTMLElement>> = ({ children, ...props })
 
   return (
     <MenuContextProvider isInHeroSection = {isInView}>
-      <nav ref ={ref} className='bg-red-500' aria-label={props['aria-label'] ?? 'navigation'} {...props}>
+      <nav ref ={ref} aria-label={props['aria-label'] ?? 'navigation'} {...props}>
             {children}
         </nav> 
     </MenuContextProvider>

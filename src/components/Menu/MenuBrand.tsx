@@ -11,7 +11,7 @@ const MenuBrand : FC<React.HTMLAttributes<HTMLElement>> = ({className}) => {
     return(
       <UpdateFollowerWrapper mouseOptions={{backgroundColor: "white", backgroundElement: null,  mixBlendMode: "difference", scale:6 }}>
         <a href="#"   className = {twMerge(className, "flex flex-col gap-y-1 z-20 absolute text-gray-200 top-3 left-3 sm:top-5 sm:left-5")}>
-          <span className='text-sm xl:text-base uppercase'>Développeur full stack</span>
+          <span className='text-sm xl:text-base uppercase'>Développeur Web</span>
           <span className='text-sm'>Evrad Loïc TSOATA</span>
         </a> 
       </UpdateFollowerWrapper> 

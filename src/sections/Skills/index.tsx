@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <SectionWrapper sectionId='skills'>
       <div className=' pt-5 sm:pt-8 lg:pt-12 xl:pt-21 pb-8 sm:pb-13 lg:pb-21 xl:pb-32'>
-        <Title  text = "Ce que je peux faire" className='mb-4 sm:mb-13 xl:mb-21'/> 
+        <Title  text = "Mes compétences clés" className='mb-4 sm:mb-13 xl:mb-21'/> 
         <div className=' px-3  grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 gap-y-8- xl:gap-y-16- gap-x-32- mt-4 md:mt-6 xl:mt-8'>
             {skills.map((skill, index) => (
               <div className='pl-3 md:pl-14 pr-1 md:pr-16 py-6 md:py-8 relative before:absolute before:bottom-0 before:left-0 before:w-full before:h-[1px]  before:bg-black before:opacity-30 sm:before:opacity-50 md:before:opacity-70

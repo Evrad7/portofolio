@@ -2,8 +2,8 @@
 
 import AppContextProvider from "@/contexts/AppContext"
 import useDevice from "@/hooks/useDevice"
-import { Fragment, useEffect, useRef } from "react"
-import { MouseFollower, useControlOptions } from "react-mouse-follower"
+import {useEffect, useRef } from "react"
+import { MouseFollower } from "react-mouse-follower"
 
 
 const AppWrapper = ({children}: {children: React.ReactNode}) => {

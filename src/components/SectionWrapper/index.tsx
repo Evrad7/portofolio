@@ -5,8 +5,7 @@ import React, { ReactNode, useEffect, useRef } from 'react'
 const SectionWrapper = ({sectionId, children}: {sectionId: string, children: ReactNode}) => {
     const {setActiveSection} = useAppContext()
     const ref = useRef<HTMLDivElement>(null)
-    const isInView = useInView(ref, {margin: "-48px 0px -100% 0px"})
-
+    const isInView = useInView(ref, {margin: `-48px 0px -90% 0px`})
     useEffect(() =>{
         if(isInView){
             setActiveSection(sectionId)

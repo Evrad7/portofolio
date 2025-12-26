@@ -3,7 +3,6 @@
 "use client"
 
 import React, { createContext,  useState } from "react";
-import { MouseFollower } from "react-mouse-follower";
 
 export type AppContextType = {
   activeSection: string | null;
@@ -16,7 +15,6 @@ const AppContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [activeSection, setActiveSection] = useState<string | null>(null)
   return (
     <AppContext.Provider value={{activeSection, setActiveSection}}>
-        <MouseFollower />
       {children}
     </AppContext.Provider>
   );
