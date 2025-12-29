@@ -93,7 +93,7 @@ const avenirLtdPro = localFont({
 
 export const metadata: Metadata = {
   title: "Evrad7",
-  description: "Portofolio d'un développeur full stack",
+  description: "Portofolio de TSOATA Evrad Loïc",
   
 };
 
