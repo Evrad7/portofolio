@@ -92,8 +92,44 @@ const avenirLtdPro = localFont({
 
 
 export const metadata: Metadata = {
-  title: "Evrad7",
-  description: "Portofolio de TSOATA Evrad Loïc",
+  metadataBase: new URL("https://evrad7.dev"),
+
+  title: {
+    default: "Evrad7 – Développeur Fullstack",
+    template: "%s | Evrad7",
+  },
+
+  description:
+    "Portfolio de TSOATA Evrad Loïc, développeur fullstack spécialisé dans la conception de solutions numériques robustes, évolutives et sécurisées. J’accompagne les projets de la réflexion à la mise en production, avec un fort accent sur la qualité, la performance, la collaboration et l’impact métier.",
+
+  authors: [
+    {
+      name: "TSOATA Evrad Loïc",
+      url: "https://evrad7.dev",
+    },
+  ],
+
+  openGraph: {
+    title: "Evrad7 – Développeur Fullstack",
+    description:
+      "Découvrez le portfolio de TSOATA Evrad Loïc, développeur fullstack impliqué dans la conception de solutions numériques performantes, fiables et orientées utilisateurs.",
+    url: "https://evrad7.dev",
+    siteName: "Evrad7",
+    locale: "fr_FR",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Evrad7 – Développeur Fullstack",
+    description:
+      "Portfolio de TSOATA Evrad Loïc, développeur fullstack orienté qualité, performance et collaboration.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
   
 };
 
