@@ -30,7 +30,8 @@ const certificates : Array<CertificateType> = [
             "Docker Swarm, Kubernetes",
             "Orchestration, déploiement"
         ],
-        link: "https://certification.mirantis.com/cf9d7b7f-3a3e-44d9-9937-6171291d33a5"
+        link: "https://evrad7.fra1.cdn.digitaloceanspaces.com/docker_certified_associate_certificate_EVRAD%20LOIC%20TSOATA.png"
+        // link: "https://certification.mirantis.com/cf9d7b7f-3a3e-44d9-9937-6171291d33a5"
     },
       {
         platform: "Udemy",
