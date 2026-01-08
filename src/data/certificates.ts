@@ -33,6 +33,17 @@ const certificates : Array<CertificateType> = [
         link: "https://evrad7.fra1.cdn.digitaloceanspaces.com/docker_certified_associate_certificate_EVRAD%20LOIC%20TSOATA.png"
         // link: "https://certification.mirantis.com/cf9d7b7f-3a3e-44d9-9937-6171291d33a5"
     },
+    {
+        platform: "ETS",
+        title: "TOEIC® Listening and Reading test (925 points)",
+        iconPath: "/logo_ets.png",
+        skills: [
+            "Anglais",
+            "Listening",
+            "Reading"
+        ],
+        link: "https://www.etsglobal.org/fr/en/digital-score-report/D78513DCE2F67C70F8532F50D3667AC8A7D3996865823ADA8F719419D5F77444bXdBNjBsNmtaWmNKNkdUOTBqbklJQU1xcWc4d1F4ZTZ1ZTZicExMdWppV2cyRWl6"
+    },
       {
         platform: "Udemy",
         title: "Elegant Automation Frameworks with Python and Pytest",
